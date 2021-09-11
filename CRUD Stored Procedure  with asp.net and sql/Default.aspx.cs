@@ -13,5 +13,10 @@ namespace CRUD_Stored_Procedure__with_asp.net_and_sql
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
