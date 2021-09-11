@@ -119,8 +119,17 @@
         <tr>
             <td style="width: 536px">
                 &nbsp;</td>
+            <td style="width: 534px">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width: 536px">
+                &nbsp;</td>
             <td style="width: 534px">
-                <asp:Button ID="Button1" CssClass="submitbtn" runat="server" Text="Submit" OnClick="Button1_Click" />
+                <asp:Button ID="Button1" CssClass="functionbtn" runat="server" Text="Submit" OnClick="Button1_Click" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="Button2" CssClass="functionbtn" runat="server" Text="Update" OnClick="Button2_Click" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button3" CssClass="functionbtn" runat="server" Text="View" OnClick="Button3_Click" />
             </td>
             <td>&nbsp;</td>
         </tr>
