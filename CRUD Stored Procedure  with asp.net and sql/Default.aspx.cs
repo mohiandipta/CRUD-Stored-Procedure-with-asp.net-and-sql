@@ -26,15 +26,18 @@ namespace CRUD_Stored_Procedure__with_asp.net_and_sql
         {
             int PO = int.Parse(TextBox1.Text);
             int LC = int.Parse(TextBox2.Text);
-            DateTime cDate = DateTime.Parse(TextBox7.Text);
             string Unit = DropDownList1.SelectedValue; 
             string Vat = TextBox3.Text;
             string ItemName = TextBox4.Text;
             string Specification = TextBox5.Text;
             string Cost = TextBox6.Text;
+            string mydate = TextBox7.Text;
+            DateTime cDate = DateTime.Parse(mydate);
 
-            SqlCommand comm = new SqlCommand("exec LCPrecosting'"+PO+"', '"+LC+"', '"+cDate+"', '"+Unit+"', '"+Vat+"', '"+ItemName+"', '"+Specification+ "', '"+Cost+"'", con);
+            con.Open();
+            SqlCommand comm = new SqlCommand("exec LcPrecosting_storeProcedure'"+PO+"', '"+LC+"', '"+cDate+"', '"+Unit+"', '"+Vat+"', '"+ItemName+"', '"+Specification+ "', '"+Cost+"'", con);
             comm.ExecuteNonQuery();
+            con.Close();
             ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert('Successfully Submited');", true);
 
             // calling GetLCPrecostingList method
@@ -43,7 +46,7 @@ namespace CRUD_Stored_Procedure__with_asp.net_and_sql
 
         void GetLCPrecostingList()
         {
-            SqlCommand comm = new SqlCommand("exec LCPrecostingList_SP", con);
+            SqlCommand comm = new SqlCommand("exec LCPrecostingList_storeProcedure", con);
             SqlDataAdapter sd = new SqlDataAdapter(comm);
             DataTable dt = new DataTable();
             sd.Fill(dt);

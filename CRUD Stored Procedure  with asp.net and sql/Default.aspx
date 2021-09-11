@@ -120,7 +120,7 @@
             <td style="width: 536px">
                 &nbsp;</td>
             <td style="width: 534px">
-                <asp:Button ID="Button1" CssClass="submitbtn" runat="server" Text="Button" OnClick="Button1_Click" />
+                <asp:Button ID="Button1" CssClass="submitbtn" runat="server" Text="Submit" OnClick="Button1_Click" />
             </td>
             <td>&nbsp;</td>
         </tr>
