@@ -83,9 +83,36 @@ namespace CRUD_Stored_Procedure__with_asp.net_and_sql
             GetLCPrecostingList();
         }
 
+        // delete btn
         protected void Button3_Click(object sender, EventArgs e)
         {
+            int PO = int.Parse(TextBox1.Text);
 
+            con.Open();
+            SqlCommand comm = new SqlCommand("exec PrecostingDelete_storeProcedure'" + PO + "'", con);
+            comm.ExecuteNonQuery();
+            con.Close();
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert('Successfully Deleted');", true);
+
+            // calling GetLCPrecostingList method
+            GetLCPrecostingList();
+        }
+
+
+
+        // view btn
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            int PO = int.Parse(TextBox1.Text);
+            int LC = int.Parse(TextBox2.Text);
+
+            con.Open();
+            SqlCommand comm = new SqlCommand("exec PrecostingView_storeProcedure'" + PO + "', '" + LC + "'", con);
+            SqlDataAdapter sd = new SqlDataAdapter(comm);
+            DataTable dt = new DataTable();
+            sd.Fill(dt);
+            GridView1.DataSource = dt;
+            GridView1.DataBind();
         }
     }
 }

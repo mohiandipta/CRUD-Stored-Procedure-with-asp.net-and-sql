@@ -129,7 +129,8 @@
                 <asp:Button ID="Button1" CssClass="functionbtn" runat="server" Text="Submit" OnClick="Button1_Click" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="Button2" CssClass="functionbtn" runat="server" Text="Update" OnClick="Button2_Click" />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button3" CssClass="functionbtn" runat="server" Text="View" OnClick="Button3_Click" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button3" CssClass="functionbtn" runat="server" Text="Delete" OnClick="Button3_Click" OnClientClick="return confirm('Are you sure?');" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button4" CssClass="functionbtn" runat="server" Text="View" OnClick="Button4_Click" />
             </td>
             <td>&nbsp;</td>
         </tr>
