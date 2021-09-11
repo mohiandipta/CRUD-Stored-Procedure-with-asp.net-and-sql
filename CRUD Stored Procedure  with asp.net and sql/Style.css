@@ -2,7 +2,7 @@
 }
 
 .heading{
-    padding:10px;
+    padding:20px;
     background-color: #222222;
     text-align:center;
 }
@@ -12,5 +12,5 @@
 }
 
 .submitbtn{
-
+    padding:10px;
 }

@@ -49,7 +49,9 @@
             <td style="width: 536px">
                 <asp:Label ID="Label8" runat="server" Font-Size="Large" Text="Creation Date"></asp:Label>
             </td>
-            <td style="width: 534px">&nbsp;</td>
+            <td style="width: 534px">
+                <asp:TextBox ID="TextBox7" runat="server" Font-Size="Medium"></asp:TextBox>
+            </td>
             <td>&nbsp;</td>
         </tr>
         <tr>

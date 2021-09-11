@@ -78,6 +78,15 @@ namespace CRUD_Stored_Procedure__with_asp.net_and_sql
         protected global::System.Web.UI.WebControls.Label Label8;
 
         /// <summary>
+        /// TextBox7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox7;
+
+        /// <summary>
         /// Label2 control.
         /// </summary>
         /// <remarks>
